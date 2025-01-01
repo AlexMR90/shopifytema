@@ -8,6 +8,18 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Menu Customizado",
+    "settings": [
+      {
+        "type": "color",
+        "id": "menu_link_color",
+        "label": "Cor dos Links do Menu",
+        "default": "#000000"
+      }
+    ]
+  },
+  
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
@@ -82,6 +94,7 @@
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
           }
+
         ],
         "role": {
           "text": "text",
