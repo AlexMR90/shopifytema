@@ -69,3 +69,30 @@
   }
   
 </style>  
+
+<script>
+    // Abrir e Fechar Modal de Pesquisa
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('search-button');
+    const searchModal = document.getElementById('search-modal');
+    const closeSearch = document.getElementById('close-search');
+  
+    // Abrir Modal
+    searchButton.addEventListener('click', () => {
+      searchModal.style.display = 'block';
+    });
+  
+    // Fechar Modal
+    closeSearch.addEventListener('click', () => {
+      searchModal.style.display = 'none';
+    });
+  
+    // Fechar ao clicar fora da Modal
+    window.addEventListener('click', (e) => {
+      if (e.target === searchModal) {
+        searchModal.style.display = 'none';
+      }
+    });
+  });
+  
+</script>
