@@ -1,0 +1,25 @@
+<!-- Botão de Pesquisa -->
+<div class="custom-search">
+    <button id="search-button" aria-label="Pesquisar">
+      🔍 Buscar
+    </button>
+  </div>
+  
+  <!-- Modal de Pesquisa -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+      <span id="close-search" class="close-search">&times;</span>
+      <h2>Buscar Produtos</h2>
+      <form action="/search" method="get">
+        <input 
+          type="text" 
+          name="q" 
+          placeholder="Digite sua busca..." 
+          required 
+        />
+        <input type="hidden" name="type" value="product" />
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+  
