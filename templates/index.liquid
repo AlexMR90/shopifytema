@@ -1,0 +1,28 @@
+{% comment %}  cabeçalho {% endcomment %}
+{% comment %}  Fim cabeçalho {% endcomment %}
+
+{% comment %}  Principal {% endcomment %}
+<main>
+  <div>
+    <img src="{{  'imgprincipal.jpg' | asset_url}}" alt="imagem interativa " width="100%" height="200vh">
+    <div>
+      <a href="{{ product.url }}">
+        {% assign produto_exemplo = all_products['poltrona-branca'] %}
+        <img
+          src="{{ produto_exemplo.featured_image | image_url: 'small' }}"
+          alt="{{ product.title }}"
+          width=""
+          height=""
+        >
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money }}</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+{% comment %} Fim principal {% endcomment %}
+
+{% comment %}  rodapé {% endcomment %}
+
+{% comment %}  Fim rodapé {% endcomment %}
