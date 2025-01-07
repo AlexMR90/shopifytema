@@ -312,9 +312,9 @@
     {% section 'custom-logo' %}
     {% section 'custom-botoes_sensiveis' %}
     {% section 'custom-search' %}
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main>
+      {{ % render 'main' % }}
       {{ content_for_layout }}
-      { % render 'main' %}
     </main>
 
     {% sections 'footer-group' %}
