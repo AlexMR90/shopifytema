@@ -5,7 +5,7 @@
   <div class="col-lg-2 col-md-2 col-3 mt-lg-3">
     <!-- coluna link home -->
     <br>
-    <a href="{{ '/' | relative_url }}" id="nomeLJ">{{ shop.name | upcase }}</a>
+    <a href="{{routes.root_url}}" id="nomeLJ">BRAVA CASA</a>
   </div>
   <!-- fim coluna link home -->
   <div class="col-lg-8 col-md-8 col-6 mt-lg-4">
@@ -15,20 +15,16 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle Menu" href="#" role="button">Coleções</a>
           <ul class="dropdown-menu">
-            {% for collection in collections %}
-              <li>
-                <a class="dropdown-item Menu" href="{{ collection.url | relative_url }}">
-                  {{ collection.title }}
-                </a>
-              </li>
-            {% endfor %}
+            <li><a class=" dropdown-item Menu" href="#">Sofás</a></li>
+            <li><a class=" dropdown-item Menu" href="#">Mesas</a></li>
+            <li><a class=" dropdown-item Menu" href="#">Poltronas</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link Menu" href="{{ 'sobrenos' | page_url }}">Sobre nós</a>
+          <a class="nav-link Menu" href="sobrenos.html">Sobre nós</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link Menu" href="{{ 'politicas' | page_url }}">Políticas</a>
+          <a class="nav-link Menu" href="politicas.html">Políticas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link Menu" href="#Atendimento">Atendimento</a>
@@ -37,9 +33,10 @@
     </nav>
   </div>
   <!-- fim coluna navegação / menu -->
-  <!-- coluna navegação loja mobile: pesquisa, login e carrinho -->
+  <!-- coluna navegação loja mobile: pesquisa,login e carrinho -->
   <div class="col-3 col-md-2">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
+      <!-- menu colapsado para mobile -->
       <!-- botão para abrir o modal -->
       <button
         class="navbar-toggler"
@@ -50,11 +47,12 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Fim botão para abrir o modal -->
       <!-- Modal -->
       <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body" id="menuMobile">
+        <div class="modal-dialog ">
+          <div class="modal-content ">
+            <div class="modal-body  " id="menuMobile">
               <div class="row mb-3">
                 <button type="button" class="btn-close mx-auto" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
@@ -112,5 +110,53 @@
         </div>
       </div>
     </nav>
+    <!-- Fim Modal -->
+    <!-- coluna navegação loja para telas grandes: pesquisa,login e carrinho -->
+    <div class="d-none d-lg-flex justify-content-around align-items-center">
+      <!-- botão pesquisa -->
+      <a class="icon mx-md-3 mx-lg-1 " href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-search my-4 my-lg-2 mx-lg-1"
+          viewBox="0 0 16 16"
+        >
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+      </a>
+      <!-- Fim botão pesquisa -->
+      <!-- botão login -->
+      <a class="icon  mx-3  " href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-file-person my-4 mx-lg-1"
+          viewBox="0 0 16 16"
+        >
+          <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+          <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+      </a>
+      <!-- Fim botão login -->
+      <!-- botão carrinho -->
+      <a class="icon  mx-md-3 mx-lg-1  " href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-cart2 my-4 "
+          viewBox="0 0 16 16"
+        >
+          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+        </svg>
+      </a>
+      <!-- Fim botão carrinho -->
+    </div>
   </div>
+  <!-- Fim Coluna navegação usuário -->
 </header>
