@@ -52,34 +52,46 @@
 
       <div class="col-md-12 col-sm-8" id="Categorias">
         <!-- categorias produtos -->
-        <h2>CATEGORIAS</h2>
+        <h2>COLEÇÕES</h2>
         <div class="row w-100">
-          <div class="card col-lg-2  col-md-4 offset-md-1 col-sm-4 mb-3 ">
+          <div class="card col-lg-2 col-md-4 offset-md-1 col-sm-4 mb-3">
             <!-- Primeiro card -->
-            <a href="#">
-              <div class="card-body">
-                <h5>SOFÁ</h5>
-              </div>
-              <div id="carrossel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="carousel-item ">
-                    <img src="{{potrona.webp | asset_url}}" class="card-img-bottom img-fluid w-100  " alt="Sofás">
+            <h5>{{ collection.title }}</h5>
+            <div id="carrossel-{{ collection.handle }}" class="carousel slide">
+              <div class="carousel-inner">
+                {% for product in collection.products %}
+                  <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <a href="{{ product.url }}">
+                      <img
+                        src="{{ product.featured_image  }}"
+                        class="card-img-bottom img-fluid w-100"
+                        alt="{{ product.title }}"
+                      >
+                    </a>
                   </div>
-                  <div class="carousel-item active">
-                    <img src="{{principal.jpg | asset_url}}" class="card-img-bottom img-fluid w-100" alt="imagem 2">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                {% endfor %}
               </div>
-            </a>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carrossel-{{ collection.handle }}"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carrossel-{{ collection.handle }}"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
+
           <!-- Fim Primeiro card -->
 
           <div class="card col-lg-2  col-md-4 offset-md-1 col-sm-4 mb-3">
