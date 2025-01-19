@@ -20,7 +20,7 @@
     display: none;
 }
 nav ul li{
-    font-size: 22px;
+    font-size: calc(22px -1vw);
     position: relative; /* Necessário para posicionar o ::after */
 }
 .Menu{
