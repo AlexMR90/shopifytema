@@ -47,7 +47,8 @@ nav ul li::after {
     content: '';
     position: absolute;
     margin-left:12px;
-    margin-top: calc(-12px -1vw);
+    top:100%;
+    transform:translateY(-50%);
     left: 0;
     width: 0;
     height: 1px; /* Espessura da linha */
