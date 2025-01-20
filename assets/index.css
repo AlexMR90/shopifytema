@@ -20,7 +20,7 @@
     display: none;
 }
 .navbar-toggler{
-    border-color: #2C3E50;
+    border: #2C3E50;
 }
 
 @media (max-width:767px){
