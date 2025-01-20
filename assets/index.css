@@ -19,11 +19,12 @@
 .dropdown-toggle::after {
     display: none;
 }
+@media(min-width:768px){
 nav ul li{
     font-size: calc(30px +10vw);
     position: relative; /* Necessário para posicionar o ::after */
-}
-@media (max-width:768px){
+}}
+@media (max-width:767px){
 nav ul li{
     font-size: calc(22px -1vw);
     position: relative; /* Necessário para posicionar o ::after */
