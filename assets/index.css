@@ -27,7 +27,7 @@ nav ul li{
 }}
 @media(min-width:768px){
     nav ul li{
-        font-size: calc(30px +10vw);
+        font-size: 30px;
         position: relative; /* Necessário para posicionar o ::after */
     }}
 .Menu{
