@@ -159,5 +159,12 @@
     </div>
   </div>
   <!-- Fim Coluna navegação usuário -->
-  <script></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var mymenuModal = new bootstrap.Modal(document.getElementById('mymenuModal'));
+      document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        mymenuModal.show();
+      });
+    });
+  </script>
 </header>
