@@ -20,9 +20,14 @@
     display: none;
 }
 nav ul li{
-    font-size: calc(22px -1vw);
+    font-size: calc(22px +1vw);
     position: relative; /* Necessário para posicionar o ::after */
 }
+@media (max-width:768px){
+nav ul li{
+    font-size: calc(22px -1vw);
+    position: relative; /* Necessário para posicionar o ::after */
+}}
 .Menu{
     transition:  color 0.3s ease;
     color: #0d6efd;
