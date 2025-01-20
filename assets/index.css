@@ -19,7 +19,9 @@
 .dropdown-toggle::after {
     display: none;
 }
-
+.navbar-toggler{
+    border-color: #2C3E50;
+}
 
 @media (max-width:767px){
 nav ul li{
