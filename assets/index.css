@@ -19,9 +19,7 @@
 .dropdown-toggle::after {
     display: none;
 }
-.navbar-toggler-icon {
-     stroke:'#2C3E50'; stroke-width:'2' ;
-}
+
 
 @media (max-width:767px){
 nav ul li{
