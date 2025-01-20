@@ -20,7 +20,7 @@
     display: none;
 }
 nav ul li{
-    font-size: calc(22px +1vw);
+    font-size: calc(22px +10vw);
     position: relative; /* Necessário para posicionar o ::after */
 }
 @media (max-width:768px){
