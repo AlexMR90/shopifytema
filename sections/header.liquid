@@ -1,5 +1,13 @@
 <head>
   <link rel="stylesheet" href="{{ 'index.css' | asset_url }}">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var testModal = new bootstrap.Modal(document.getElementById('testModal'));
+      document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        testModal.show();
+      });
+    });
+  </script>
 </head>
 <header class="row w-100a" id="topo">
   <div class="col-lg-2 col-md-2 col-3 mt-lg-3">
@@ -179,12 +187,4 @@
     </div>
   </div>
   <!-- Fim Coluna navegação usuário -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var testModal = new bootstrap.Modal(document.getElementById('testModal'));
-      document.querySelector('.navbar-toggler').addEventListener('click', function () {
-        testModal.show();
-      });
-    });
-  </script>
 </header>
