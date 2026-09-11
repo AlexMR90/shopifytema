@@ -313,7 +313,7 @@
     {% section 'custom-botoes_sensiveis' %}
     {% section 'custom-search' %}
     <main>
-      {{ % render 'main' % }}
+      {{ nil }}
       {{ content_for_layout }}
     </main>
 
@@ -378,3 +378,13 @@
     {%- endif -%}
   </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{ % render 'main' % }}"
+  to: "{{ nil }}"
+  position: 18727..18736
+{% endcomment %}
